@@ -2,6 +2,7 @@ rm(list =ls())
 library(readxl)
 library(dplyr)
 library(RWeka)
+library(stringr)
 
 fin <- list.files(path = "data/", full.names = T)
 ds.list <- lapply(fin, read_excel, col_names = F)
@@ -50,8 +51,6 @@ for(i in emoji.indexes){
   }
 }
 
-
-
 # extract x, y coordinates
 temp <- str_extract(emoji.ds$map.info.B,"\\d.*(,)-\\d.*(&z=14)")
 locations = strsplit(temp, ",")
@@ -61,5 +60,8 @@ y <- as.numeric(
   lapply(locations, 
          function(x)strsplit(x[2], "&z")[[1]][1])))
 
-emoji.ds$x = x
-emoji.ds$y = y
+emoji.ds$latitude = x
+emoji.ds$longitude = y
+
+# give us a CSV
+write.csv(emoji.ds, file = "twimoji.csv")
