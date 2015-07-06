@@ -5,6 +5,7 @@ a mostly-for-fun exercise in analyzing location-enabled tweets with emoji in Phi
 #### Collection
 This project uses the simplest method to aggregate tweets based on simple parameters:
 - This IFTTT job to collect tweets _with location attributes_ in a given radius around Philadelphia:
+
 <a href="https://ifttt.com/view_embed_recipe/305098-collect-tweets-with-location" target = "_blank" class="embed_recipe embed_recipe-l_28" id= "embed_recipe-305098"><img src= 'https://ifttt.com/recipe_embed_img/305098' alt="IFTTT Recipe: Collect Tweets with Location connects twitter to google-drive" width="370px" style="max-width:100%"/></a><script async type="text/javascript" src= "//ifttt.com/assets/embed_recipe.js"></script>
 - Saves to a Google Spreadsheet, when full begins new sheet
 
