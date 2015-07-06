@@ -28,7 +28,7 @@ t <- arrange(as.data.frame(table(tokens)), desc(Freq))
 # emoji frequency - columns : emojis
 emoji.frequency <- matrix(NA, nrow = nrow(ds), ncol = nrow(emoticons))
 for(i in 1:nrow(emoticons)){
- print(i)
+  print(i)
   emoji.frequency[,i] <- regexpr(emoticons$bytes[i],ds$text, useBytes = T )
 }
 
@@ -44,7 +44,7 @@ emoticons <- cbind(emoji.counts, emoticons)
 emoji.indexes <- which(rowSums(emoji.frequency > -1) > 0)
 emoji.ds <- NULL
 for(i in emoji.indexes){
-
+  
   valid.cols <- which(emoji.frequency[i,]>-1)
   for(j in valid.cols){
     emoji.ds <- rbind(cbind(ds[i,], emoticons[j,]), emoji.ds)
@@ -57,8 +57,8 @@ locations = strsplit(temp, ",")
 x <- as.numeric(unlist(lapply(locations, function(x)x[1])))
 y <- as.numeric(
   unlist(
-  lapply(locations, 
-         function(x)strsplit(x[2], "&z")[[1]][1])))
+    lapply(locations, 
+           function(x)strsplit(x[2], "&z")[[1]][1])))
 
 emoji.ds$latitude = x
 emoji.ds$longitude = y
