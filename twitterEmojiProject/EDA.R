@@ -4,6 +4,7 @@ library(dplyr)
 library(RWeka)
 library(lubridate)
 library(stringr)
+library(qdapRegex)
 
 # import all tweet data####
 fin <- list.files(path = "data/", full.names = T)
@@ -13,6 +14,8 @@ ds <- unique(do.call(rbind.data.frame, ds.list))
 names(ds) <- c("created","screenName", "text" , "ID", "map.info.A", "map.info.B")
 # convert date
 ds$created <- mdy_hm(ds$created)
+tweets.clean <- ds$text
+
 
 # import emoticon table ####
 emoticons <- read.csv("emoticon_conversion_noGraphic.csv", header = F)
@@ -38,9 +41,17 @@ emoji.frequency <- matrix(NA, nrow = nrow(ds), ncol = nrow(emoticons))
 for(i in 1:nrow(emoticons)){
   print(i)
   emoji.frequency[,i] <- regexpr(emoticons$bytes[i],ds$text, useBytes = T )
+  
+  # if the emoji is present in any tweet
+  # remove the emoji from the tweet for text/sentiment analysis
+  if(any(emoji.frequency[,i]>-1)){
+    tweets.clean <- gsub(emoticons$bytes[i], "", tweets.clean, useBytes = T)
+  }
 }
 
+# tabulate the number of times each emoji is seen
 emoji.counts <- colSums(emoji.frequency>-1)
+# append this to the emoticons data.frame
 emoticons <- cbind(emoji.counts, emoticons)
 
 
@@ -69,6 +80,11 @@ emoji.ds$longitude <- as.numeric(
     lapply(locations, 
            function(x)strsplit(x[2], "&z")[[1]][1])))
 
+# Remove all urls from tweets ####
+tweets.clean <- rm_twitter_url(tweets.clean, extract = F, replacement = "", clean = F)
+
+
+
 
 # stats####
 percentage.emoji <- 100*length(emoji.indexes)/nrow(ds)
@@ -85,3 +101,6 @@ write.csv(emoji.ds, file = "twimoji.csv")
 
 # write csv containing frequencies of emojis
 write.csv(arrange(emoticons, desc(emoji.counts)), "emoticon_counts.csv")
+
+
+
