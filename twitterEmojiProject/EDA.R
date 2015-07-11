@@ -15,6 +15,7 @@ names(ds) <- c("created","screenName", "text" , "ID", "map.info.A", "map.info.B"
 ds$created <- mdy_hm(ds$created)
 
 write.csv(ds, file="urtweets.csv")
+
 # import emoticon table ####
 emoticons <- read.csv("emoticon_conversion_noGraphic.csv", header = F)
 # set colum names
