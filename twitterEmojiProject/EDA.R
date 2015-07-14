@@ -16,6 +16,15 @@ names(ds) <- c("created","screenName", "text" , "ID", "map.info.A", "map.info.B"
 ds$created <- mdy_hm(ds$created)
 tweets.clean <- ds$text
 
+#convert longitude and latitude
+temp <- str_extract(ds$map.info.B,"\\d.*(,)-\\d.*(&z=14)")
+locations = strsplit(temp, ",")
+ds$latitude <- as.numeric(unlist(lapply(locations, function(x)x[1])))
+ds$longitude <- as.numeric(
+  unlist(
+    lapply(locations, 
+           function(x)strsplit(x[2], "&z")[[1]][1])))
+
 
 write.csv(ds, file="urtweets.csv")
 
@@ -26,6 +35,8 @@ names(emoticons) <- c("unicode", "bytes","description")
 rm(ds.list)
 rm(fin)
 
+# remove invalid rows
+ds <- ds[!is.na(ds$created),]
 
 # get word frequencies and tokens
 tokens <- WordTokenizer(ds$text)
@@ -74,13 +85,13 @@ for(i in emoji.indexes){
 }
 
 # extract x, y coordinates ####
-temp <- str_extract(emoji.ds$map.info.B,"\\d.*(,)-\\d.*(&z=14)")
-locations = strsplit(temp, ",")
-emoji.ds$latitude <- as.numeric(unlist(lapply(locations, function(x)x[1])))
-emoji.ds$longitude <- as.numeric(
-  unlist(
-    lapply(locations, 
-           function(x)strsplit(x[2], "&z")[[1]][1])))
+# temp <- str_extract(emoji.ds$map.info.B,"\\d.*(,)-\\d.*(&z=14)")
+# locations = strsplit(temp, ",")
+# emoji.ds$latitude <- as.numeric(unlist(lapply(locations, function(x)x[1])))
+# emoji.ds$longitude <- as.numeric(
+#   unlist(
+#     lapply(locations, 
+#            function(x)strsplit(x[2], "&z")[[1]][1])))
 
 # Remove all urls from tweets ####
 tweets.clean <- rm_twitter_url(tweets.clean, extract = F, replacement = "", clean = F)
