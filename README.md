@@ -1,6 +1,8 @@
 # twimoji
 a mostly-for-fun exercise in analyzing location-enabled tweets with emoji in Philadelphia
 
+![alltweets.gif]
+
 ## Data
 #### Collection
 This project uses the simplest method to aggregate tweets based on simple parameters:

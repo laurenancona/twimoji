@@ -1,0 +1,14 @@
+ .legend {
+  background-color: #353E47;
+  position: fixed;
+  display: block;
+  opacity: 0.8;
+  float: left;
+  margin-left: 20px;
+  bottom: 20px;
+  width: 350px;
+  height: auto;
+  padding: 10px;
+  color: #B5BD00;
+  font-size: 1.1em;
+}

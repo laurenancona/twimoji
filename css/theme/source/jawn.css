@@ -2,30 +2,36 @@
 /**
  * This is a riff on Black theme by Lauren Ancona
  */
+/* line 41, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/source/jawn.scss */
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
   color: #353E47; }
 
+/* line 47, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/source/jawn.scss */
 section.lg p {
   font-size: 45px; }
 
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
+/* line 7, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 body {
   background: #353E47;
   background-color: #353E47; }
 
+/* line 12, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal {
   font-family: 'proxima_nova_cn_rgregular', Helvetica, sans-serif;
   font-size: 50px;
   font-weight: normal;
   color: #fff; }
 
+/* line 19, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 ::selection {
   color: #fff;
-  background: #f9ff3e;
+  background: #f7ff3e;
   text-shadow: none; }
 
+/* line 26, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal .slides > section, .reveal .slides > section > section {
   line-height: 1.5;
   font-weight: inherit; }
@@ -33,6 +39,7 @@ body {
 /*********************************************
  * HEADERS
  *********************************************/
+/* line 40, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   margin: 0 0 20px 0;
   color: #fff;
@@ -44,38 +51,46 @@ body {
   text-shadow: none;
   word-wrap: break-word; }
 
+/* line 55, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal h1 {
   font-size: 2.3em;
   text-transform: uppercase;
   font-weight: 700; }
 
+/* line 56, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal h2 {
   font-size: 1.7em; }
 
+/* line 57, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal h3 {
   font-size: 1.3em;
   text-transform: uppercase;
   font-weight: 700; }
 
+/* line 58, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal h4 {
   font-size: 0.9em; }
 
+/* line 60, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal h1 {
   text-shadow: none; }
 
 /*********************************************
  * OTHER
  *********************************************/
+/* line 69, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal p {
   margin: 20px 0;
   line-height: 1.3; }
 
+/* line 73, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal left-side {
   float: left;
   position: absolute;
   left: 20px;
   bottom: 20px; }
 
+/* line 80, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal .legend {
   background-color: #353E47;
   position: absolute;
@@ -91,46 +106,59 @@ body {
   font-size: 1.1em; }
 
 /* Ensure certain elements are never larger than the slide itself */
+/* line 98, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal img, .reveal video, .reveal iframe {
   max-width: 95%;
   max-height: 95%; }
 
+/* line 103, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal strong, .reveal b {
   font-weight: bold; }
 
+/* line 107, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal em {
   font-style: italic; }
 
+/* line 113, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal ol, .reveal dl, .reveal ul {
   display: inline-block;
   text-align: left;
   margin: 0 0 0 1em; }
 
+/* line 120, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal ol {
   list-style-type: decimal; }
 
+/* line 124, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal ul {
   list-style-type: disc; }
 
+/* line 128, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal ul ul {
   list-style-type: square; }
 
+/* line 132, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal ul ul ul {
   list-style-type: circle; }
 
+/* line 139, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal ul ul, .reveal ul ol, .reveal ol ol, .reveal ol ul {
   display: block;
   margin-left: 40px; }
 
+/* line 144, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal dt {
   font-weight: bold; }
 
+/* line 148, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal dd {
   margin-left: 40px; }
 
+/* line 153, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal q, .reveal blockquote {
   quotes: none; }
 
+/* line 157, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal blockquote {
   display: block;
   position: relative;
@@ -141,12 +169,15 @@ body {
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
 
+/* line 169, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal blockquote p:first-child, .reveal blockquote p:last-child {
   display: inline-block; }
 
+/* line 173, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal q {
   font-style: italic; }
 
+/* line 177, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal pre {
   display: block;
   position: relative;
@@ -159,10 +190,12 @@ body {
   word-wrap: break-word;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
 
+/* line 192, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal code {
   font-family: monospace;
   font-size: 18px; }
 
+/* line 197, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal pre code {
   display: block;
   padding: 5px;
@@ -172,76 +205,92 @@ body {
   background: #3F3F3F;
   color: #DCDCDC; }
 
+/* line 207, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal table {
   margin: auto;
   border-collapse: collapse;
   border-spacing: 0; }
 
+/* line 213, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal table th {
   font-weight: bold; }
 
+/* line 218, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal table th, .reveal table td {
   text-align: left;
   padding: 0.2em 0.5em 0.2em 0.5em;
   border-bottom: 1px solid; }
 
+/* line 225, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal table th[align="center"], .reveal table td[align="center"] {
   text-align: center; }
 
+/* line 230, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal table th[align="right"], .reveal table td[align="right"] {
   text-align: right; }
 
+/* line 234, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal table tr:last-child td {
   border-bottom: none; }
 
+/* line 238, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal sup {
   vertical-align: super; }
 
+/* line 241, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal sub {
   vertical-align: sub; }
 
+/* line 245, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal small {
   display: inline-block;
   font-size: 0.6em;
   line-height: 1.2em;
   vertical-align: top; }
 
+/* line 252, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal small * {
   vertical-align: top; }
 
 /*********************************************
  * LINKS
  *********************************************/
+/* line 261, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal a {
   color: #B5BD00;
   text-decoration: none;
-  -webkit-transition: color 0.15s ease;
-  -moz-transition: color 0.15s ease;
-  transition: color 0.15s ease; }
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  transition: color .15s ease; }
 
+/* line 269, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal a:hover {
-  color: #f7ff0b;
+  color: #f5ff0b;
   text-shadow: none;
   border: none; }
 
+/* line 276, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal .roll span:after {
   color: #fff;
-  background: #6d7100; }
+  background: #6c7100; }
 
 /*********************************************
  * IMAGES
  *********************************************/
+/* line 286, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
   border: 4px solid #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
+/* line 294, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal a img {
-  -webkit-transition: all 0.15s linear;
-  -moz-transition: all 0.15s linear;
-  transition: all 0.15s linear; }
+  -webkit-transition: all .15s linear;
+  -moz-transition: all .15s linear;
+  transition: all .15s linear; }
 
+/* line 300, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
   border-color: #B5BD00;
@@ -250,36 +299,46 @@ body {
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
+/* line 313, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal .controls div.navigate-left, .reveal .controls div.navigate-left.enabled {
   border-right-color: #B5BD00; }
 
+/* line 318, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal .controls div.navigate-right, .reveal .controls div.navigate-right.enabled {
   border-left-color: #B5BD00; }
 
+/* line 323, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal .controls div.navigate-up, .reveal .controls div.navigate-up.enabled {
   border-bottom-color: #B5BD00; }
 
+/* line 328, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal .controls div.navigate-down, .reveal .controls div.navigate-down.enabled {
   border-top-color: #B5BD00; }
 
+/* line 332, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #f7ff0b; }
+  border-right-color: #f5ff0b; }
 
+/* line 336, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #f7ff0b; }
+  border-left-color: #f5ff0b; }
 
+/* line 340, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #f7ff0b; }
+  border-bottom-color: #f5ff0b; }
 
+/* line 344, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #f7ff0b; }
+  border-top-color: #f5ff0b; }
 
 /*********************************************
  * PROGRESS BAR
  *********************************************/
+/* line 353, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2); }
 
+/* line 356, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal .progress span {
   background: #B5BD00;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
@@ -289,5 +348,8 @@ body {
 /*********************************************
  * SLIDE NUMBER
  *********************************************/
+/* line 367, /Users/lancona/Documents/Github/laurenancona/twimoji/css/theme/template/theme.scss */
 .reveal .slide-number {
   color: #B5BD00; }
+
+/*# sourceMappingURL=jawn.css.map */
