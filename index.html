@@ -17,7 +17,19 @@
 		<link rel="stylesheet" href="css/theme/jawn.css" id="theme">
 
 		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="lib/css/atelier-forest.dark.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript">
+     $(document).ready(function() {
+        $(".convert-emoji").each(function() {
+            var original = $(this).html();
+            // use .shortnameToImage if only converting shortnames (for slightly better performance)
+            var converted = emojione.toImage(original);
+            $(this).html(converted);
+		        });
+		    });
+		</script>
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -64,23 +76,25 @@
 						![](presentation/img/IFTTT.png)
 					</script>	
 				</section>
-				<section data-markdown>
-						#Overview
-						---
-						* May 9 - July 11, 2015
-						* 28,799 location-enabled tweets
-						* 7,363 unique users
+				<section>
+						<h1>Overview</h1>
+						<hr>
+						<ul>
+							<li>May 9 - July 11, 2015</li>
+							<li>28,799 location-enabled tweets</li>
+						  <li>7,363 unique users</li>
+						</ul>  
 				</section>
-
-				<section data-markdown>
-		
-						###Tweet Cleaning
-						---
-```
+				<section data-background-transition-speed="slow" data-background-iframe="http://laurenancona.github.io/twimoji/web/all-tweets.html">
+				</section>
+				<section>
+						<h3>Tweet Cleaning</h3>
+						<hr>
+							<pre><code data-trim>
 emoji.frequency <- matrix(NA, nrow = nrow(ds), ncol = nrow(emoticons))
 for(i in 1:nrow(emoticons)){
   emoji.frequency[,i] <- regexpr(emoticons$bytes[i],ds$text, useBytes = T )	
-
+  }
 emoji.per.tweet <- rowSums(emoji.frequency > -1)
 emoji.indexes <- which( emoji.per.tweet > 0)
 emoji.ds <- NULL
@@ -90,7 +104,7 @@ for(i in emoji.indexes){
     emoji.ds <- rbind(cbind(ds[i,], emoticons[j,]), emoji.ds)
   }
 }
-```				
+					</code></pre>				
 				</section>
 <!-- 				<section>
 					<h2>Fragment Styles</h2>
@@ -102,9 +116,34 @@ for(i in emoji.indexes){
 					<p class="fragment highlight-red">highlight-red</p>
 					<p class="fragment highlight-blue">highlight-blue</p>
 				</section> -->
-				<section data-background-iframe="http://laurenancona.github.io/twimoji/web/all-tweets.html">
-<!-- 					<p class="legend">All Tweets</p> -->
+				<section>
+						<h1>Emoji</h1>
+						<hr>
+						<ul>
+							<li>~ 25% of tweets contained emoji</li>
+							<li>590 unique emoji</li>
+						  <li>7,131 tweets</li>
+						</ul>  
 				</section>
+				<section>
+				<h3>Top Emoji</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Count</th>
+								<th>Unicode</th>
+								<th>Desc</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1085</td>
+								<td>U+1F602</td>
+								<td>face with tears of joy</td>
+							<tr></tr>
+						</tbody>
+					</table>
+				</section>				
 				<section data-background-iframe="http://laurenancona.github.io/twimoji/web/emoji-tweets.html">
 <!-- 					<p class="legend">All Tweets</p> -->
 				</section>
@@ -112,16 +151,16 @@ for(i in emoji.indexes){
 						# Possibilities
 						---
 						* Geo-analysis with [available](http://censusreporter.org/) [open data](https://www.opendataphilly.org)
+							- True on-the-fly rendering as map markers (JS is hard)
 						* [Lexical research](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0073791)
-							- gender 
-							- age
+							- gender, age
 							- psychological characteristics
 				</section>
 				<section data-markdown>
 				<section data-markdown>
 							# Caveats
 							---
-							<span class="fragment fade-out">							
+							* Estimated only 1% of tweets have location
 							* Emoji meaning vs. use
 							* Inconsistent rendering across platforms
 							</span>			
@@ -146,6 +185,8 @@ for(i in emoji.indexes){
 						##[bit.ly/twimoji](http://bit.ly/twimoji)
 						---
 						[@laurenancona](https://twitter.com/laurenancona)  |  [@devlintufts](https://twitter.com/devlintufts)
+						
+						![]("http://laurenancona.github.io/twimoji/presentation/img/Code-for-Liberty.gif")
 					</script>
 				</section>
 			</div>
