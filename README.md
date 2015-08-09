@@ -1,7 +1,7 @@
 # twimoji
 a mostly-for-fun exercise in analyzing location-enabled tweets with emoji in Philadelphia
 
-![alltweets.gif]
+![](presentation/img/alltweets.gif)
 
 ## Data
 #### Collection
